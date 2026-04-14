@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+psycopg2
+pandas
+requests
+sentence-transformers
+faiss-cpu
+matplotlib
+streamlit
