@@ -1,5 +1,13 @@
-PYTHON ?= venv/bin/python
-PIP ?= venv/bin/pip
+PYTHON ?= python3
+PIP ?= pip3
+
+ifneq ($(wildcard venv/bin/python),)
+PYTHON := venv/bin/python
+endif
+
+ifneq ($(wildcard venv/bin/pip),)
+PIP := venv/bin/pip
+endif
 
 .PHONY: install run-cli run-web test check eval-fast eval-audit db-start db-stop db-seed
 
